@@ -2,10 +2,11 @@
       //var_dump($dathistoria);
       //var_dump($datpaciente);
       //var_dump($datconsulta->datantfam);
+      //var_dump($datoconsulta);
       //exit;
     ?>
 
-    <input type="hidden" name="urldestino" value="<?=$this->uri->uri_string()?>" />
+    <input type="hidden" name="urldestino" value="<?= $this->uri->uri_string()?>" />
     
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
          <div class="panel panel-default">
@@ -18,7 +19,7 @@
           </div>
           <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
             <div class="panel-body">
-             <!-- <?=$this->load->view('Asistencial/Historia/ofta/f_historia_motivoconsult_ofta')?>-->
+              <?= $this->load->view('Asistencial/Historia/ofta/f_historia_motivoconsult_ofta')?>
             </div>
            </div>
           </div>
@@ -34,7 +35,7 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-        <?=$this->load->view('Asistencial/Historia/ofta/f_historia_ANTECPERSONALES',array("tipoantec"=>"PERSONALES"))?>
+        <?= $this->load->view('Asistencial/Historia/ofta/f_historia_ANTECPERSONALES',array("tipoantec"=>"PERSONALES"))?>
       </div>
     </div>
   </div>
@@ -48,7 +49,7 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
-        <?=$this->load->view('Asistencial/Historia/ofta/f_historia_ANTECPERSONALES',array("tipoantec"=>"FAMILIARES"))?>
+        <?= $this->load->view('Asistencial/Historia/ofta/f_historia_ANTECPERSONALES',array("tipoantec"=>"FAMILIARES"))?>
       </div>
      </div>
     </div>
@@ -57,7 +58,7 @@
 <?if($btnguardarantecedentes==true){?>
 <div class="form-group">
   <div class="row text-center">
-   <button type="submit" class="btn <?=$this->Planthtml->estilo->colorprinc?>">Guardar</button>
+   <button type="submit" class="btn <? // $this->Planthtml->estilo->colorprinc?>">Guardar</button>
   </div>
 </div>
 <?}?> 
@@ -75,7 +76,7 @@
                 </div>
                 <div id="collapseadmin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingadmin">
                   <div class="panel-body">
-                    <?=$this->load->view('Asistencial/Historia/f_historia_admision','','refresh')?>
+                    <? // $this->load->view('Asistencial/Historia/f_historia_admision','','refresh')?>
                   </div>
                  </div>
                 </div>-->
@@ -91,29 +92,13 @@
            </div>
            <div id="collapseSixe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
              <div class="panel-body">
-               <?=$this->load->view('Asistencial/Historia/ofta/f_historia_EXAVISUAL','','refresh')?>
+             <?= $this->load->view('Asistencial/Historia/ofta/f_historia_EXAVISUAL','','refresh')?>
              </div>
            </div>
          </div> 
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
-           <div class="panel-heading" role="tab" id="headingSix">
-             <h4 class="panel-title">
-               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixe9" aria-expanded="false" aria-controls="collapseSix">
-                 <i class="glyphicon glyphicon-record"></i> COVERT TEST
-               </a>
-             </h4>
-           </div>
-           <div id="collapseSixe9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-             <div class="panel-body">
-               <?=$this->load->view('Asistencial/Historia/ofta/f_historia_EXACOVERTE','','refresh')?>
-             </div>
-           </div>
-         </div> 
-
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
+         <div class="panel panel-default">
            <div class="panel-heading" role="tab" id="headingSix">
              <h4 class="panel-title">
                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixe10" aria-expanded="false" aria-controls="collapseSix">
@@ -123,10 +108,28 @@
            </div>
            <div id="collapseSixe10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
              <div class="panel-body">
-               <?=$this->load->view('Asistencial/Historia/ofta/f_historia_EXAREFRACCION','','refresh')?>
+             <?= $this->load->view('Asistencial/Historia/ofta/f_historia_EXAREFRACCION','','refresh')?>
              </div>
            </div>
-         </div> 
+         </div>  
+
+<!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          
+
+         <div class="panel panel-default">
+           <div class="panel-heading" role="tab" id="headingSix">
+             <h4 class="panel-title">
+               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixe9" aria-expanded="false" aria-controls="collapseSix">
+                 <i class="glyphicon glyphicon-record"></i> COVERT TEST
+               </a>
+             </h4>
+           </div>
+           <div id="collapseSixe9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+             <div class="panel-body">
+              <?= $this->load->view('Asistencial/Historia/ofta/f_historia_EXACOVERTE','','refresh')?>
+             </div>
+           </div>
+         </div> -->
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
           <div class="panel panel-default">
@@ -139,7 +142,7 @@
            </div>
            <div id="collapseSixAQ" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
              <div class="panel-body">
-               <!--<?=$this->load->view('Asistencial/Historia/ofta/f_historia_rev_sist_ofta2','','refresh')?>-->
+               <?=$this->load->view('Asistencial/Historia/ofta/f_historia_rev_sist_ofta2','','refresh')?>
              </div>
            </div>
          </div> 
@@ -155,9 +158,10 @@
            </div>
            <div id="collapseID" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingID">
              <div class="panel-body">
-               <?$this->load->view('Asistencial/Historia/ofta/f_historia_impre_diagnostica_ofta','','refresh');?>
+               <?=$this->load->view('Asistencial/Historia/ofta/f_historia_impre_diagnostica_ofta','','refresh');?>
              </div>
-           </div>
+             <input type="hidden" name="dx[documento]" value="<?= $datpaciente->identificacion_t3 ?>" id="documento">
+           </div> 
          </div>   
 
 
@@ -180,7 +184,7 @@
                      <legend><strong>Resultados Laboratorios, Ayudas Dx</strong></legend>
                      <div class="form-group">
                        <div class="col-lg-12">
-                        <textarea class="form-control" name="analisis[laboratorios]" rows="6" required><?=$datofta[0]["a_laboratorios_ofta"]?></textarea>
+                        <textarea class="form-control" name="analisis[laboratorios]" rows="6" ><? // $datofta[0]["a_laboratorios_ofta"]?></textarea>
                       </div>
                      </div>
                    </fieldset>
@@ -191,7 +195,7 @@
                      <legend><strong>Analisis</strong></legend>
                      <div class="form-group">
                        <div class="col-lg-12">
-                        <textarea class="form-control" name="analisis[conducta]" rows="6" required><?=$datofta[0]["a_conducta_ofta"]?></textarea>
+                        <textarea class="form-control" name="analisis[conducta]" rows="6" ><? // $datofta[0]["a_conducta_ofta"]?></textarea>
                       </div>
                      </div>
                    </fieldset>
@@ -202,7 +206,7 @@
                      <legend><strong>Conducta o Plan</strong></legend>
                      <div class="form-group">
                        <div class="col-lg-12">
-                        <textarea class="form-control" name="analisis[planmanejo]" rows="6" required><?=$datofta[0]["a_planmanejo_ofta"]?></textarea>
+                        <textarea class="form-control" name="analisis[planmanejo]" rows="6" ><? // $datofta[0]["a_planmanejo_ofta"]?></textarea>
                       </div>
                      </div>
                    </fieldset>
